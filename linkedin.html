@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .grid-container {
+        min-height: 100vh;
+
+        display: grid;
+        grid-template:
+          "header header header" 60px
+          "left-sidebar-one main right-sidebar-one" 1fr
+          "left-sidebar-two main right-sidebar-two" 1fr
+          "left-sidebar-three main right-sidebar-three" 1fr/
+          1fr 1fr 1fr;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: rgba(216, 22, 22, 0.479);
+      }
+
+      .left-sidebar-one {
+        grid-area: left-sidebar-one;
+        background-color: rgb(0, 255, 0);
+      }
+      .left-sidebar-two {
+        grid-area: left-sidebar-two;
+        background-color: rgba(0, 255, 0, 0.521);
+      }
+      .left-sidebar-three {
+        grid-area: left-sidebar-three;
+        background-color: rgba(0, 255, 0, 0.199);
+      }
+      .main {
+        grid-area: main;
+        background-color: rgb(81, 81, 255);
+      }
+      .right-sidebar-one {
+        grid-area: right-sidebar-one;
+        background-color: rgb(255, 255, 0);
+      }
+      .right-sidebar-two {
+        grid-area: right-sidebar-two;
+        background-color: rgba(255, 255, 0, 0.5);
+      }
+      .right-sidebar-three {
+        grid-area: right-sidebar-three;
+        background-color: rgba(255, 255, 0, 0.233);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">Header</header>
+      <aside class="right-sidebar-one">Sidebar</aside>
+      <aside class="right-sidebar-two">Sidebar</aside>
+      <aside class="right-sidebar-three">Sidebar</aside>
+      <main class="main">main</main>
+      <aside class="left-sidebar-one">Sidebar</aside>
+      <aside class="left-sidebar-two">Sidebar</aside>
+      <aside class="left-sidebar-three">Sidebar</aside>
+    </div>
+  </body>
+</html>

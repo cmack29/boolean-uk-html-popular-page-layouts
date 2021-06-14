@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .grid-container {
+        min-height: 100vh;
+
+        display: grid;
+        grid-template:
+          "header header header" 50px
+          "left-menu main right-menu" 1fr
+          "footer footer footer" 50px /
+          200px 1fr 200px;
+      }
+
+      .main-header {
+        grid-area: header;
+        background-color: lightcoral;
+      }
+
+      .left-menu {
+        grid-area: left-menu;
+        background-color: lightcyan;
+      }
+
+      .right-menu {
+        grid-area: right-menu;
+        background-color: lightgreen;
+      }
+
+      .main {
+        grid-area: main;
+        background-color: lightsalmon;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: lightseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="main-header">Header</header>
+      <aside class="left-menu">Left Menu</aside>
+      <main class="main">Main</main>
+      <aside class="right-menu">Right Menu</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>

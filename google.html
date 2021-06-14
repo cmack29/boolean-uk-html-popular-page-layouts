@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+      .outer-grid > * {
+        border: 0.5px solid rgb(126, 126, 126);
+      }
+
+      .outer-grid {
+        min-height: 100vh;
+        display: grid;
+        grid-template:
+          "header header" 50px
+          "main sidebar" 1fr /
+          1fr 200px;
+      }
+
+      .main-header {
+        grid-area: header;
+        background-color: rgb(228, 228, 228);
+      }
+
+      .main-section {
+        grid-area: main;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(228, 228, 228);
+      }
+
+      .inner-grid > * {
+        border: 0.5px solid black;
+      }
+
+      .inner-grid {
+        display: grid;
+        grid-template:
+          "section-header section-right" 100px
+          "section-left section-right" 1fr /
+          150px 1fr;
+      }
+
+      .section-header {
+        grid-area: section-header;
+      }
+
+      .section-left {
+        grid-area: section-left;
+      }
+
+      .section-right {
+        grid-area: section-right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-grid">
+      <header class="main-header">Gmail</header>
+      <main class="main-section inner-grid">
+        <!-- Inner Grid -->
+        <button class="section-header">Compose</button>
+        <section class="section-left">Inbox</section>
+        <section class="section-right">New Mail</section>
+      </main>
+      <aside class="sidebar">Quick settings</aside>
+    </div>
+  </body>
+</html>
